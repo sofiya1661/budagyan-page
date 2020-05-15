@@ -1,0 +1,34 @@
+@startuml
+skinparam actor {
+	BackgroundColor White
+	ArrowColor Black
+	BorderColor Black
+}
+skinparam usecase {
+	BackgroundColor White
+	ArrowColor Black
+	BorderColor Black
+}
+left to right direction
+actor P0 as "Человек"
+actor M0 as "Модуль"
+actor P as "Пользователь"
+actor M as "Программный модуль"
+
+package APP as "Мобильное приложение"{
+usecase A as "Создание документа"
+usecase B as "Создание проекта"
+usecase C as "Формирование запроса"
+usecase D as "Формирование отчета"
+P -- (A)
+(A) -- M
+P -- (B)
+(B) -- M
+P -- (C)
+(C) -- M
+P -- (D)
+(D) -- M
+}
+P0 <|-- P
+M --|> M0
+@enduml

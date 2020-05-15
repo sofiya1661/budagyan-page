@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Лабораторная работа 1",
+        "description": "Разработка UML диаграммы прецедентов",
+        "preview": "img/use-case-diagram.png"
+    },
+    {
+        "id": 2,
+        "title": "Лабораторная работа 2",
+        "description": "Разработка UML диаграммы прецедентов",
+        "preview": "img/use-case-diagram.png"
+    },
+    {
+        "id": 3,
+        "title": "Лабораторная работа 3",
+        "description": "Разработка UML диаграммы прецедентов",
+        "preview": "img/use-case-diagram.png"
+    },
+    {
+        "id": 4,
+        "title": "Лабораторная работа 4",
+        "description": "Разработка UML диаграммы прецедентов",
+        "preview": "img/use-case-diagram.png"
+    },
+    {
+        "id": 5,
+        "title": "Отчёт по работе с коммандой",
+        "description": "Лабораторные по работе с коммандой",
+        "preview": "img/Пример.png"
+    }
+]
