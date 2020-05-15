@@ -3,41 +3,45 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Sofiya</title>
+  <title>!Моя страница!</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
   <link rel="stylesheet" href="style.css" />
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <script>	
+function clock(){
+ var date = new Date(),
+ hours = (date.getHours() < 10) ? '0' + date.getHours() : date.getHours(),
+ minutes = (date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes(),
+ seconds = (date.getSeconds() < 10) ? '0' + date.getSeconds() : date.getSeconds();
+ document.getElementById('clock').innerHTML = hours + ':' + minutes + ':' + seconds;
+}
+setInterval(clock, 1000);
+clock();
+</script>
 </head>
 
 <body ng-controller="AppController">
-
   <md-toolbar layout="row" class="md-toolbar-tools">
     <md-button class="menu md-icon-button" hide-gt-xs ng-click="toggle()" aria-label="Show User List">
       <md-icon md-font-set="md">menu</md-icon>
     </md-button>
-    <h1 flex md-truncate><b>Sofiya</b></h1>
-    <div hide-xs>
-      <md-button ng-href="#!/topics">Главная</md-button>
-      <md-button ng-href="#!/about">О сайте</md-button>
-    </div>
+    <h1 flex md-truncate><b>Проектирование информационных систем</b></h1>
   </md-toolbar>
 
-  <div flex layout="row">
-
-    <md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="drawer" ng-click="toggle()">
-      <div layout="column">
-        <md-button ng-href="#!/topics">Главная</md-button>
-        <md-button ng-href="#!/about">О сайте</md-button>
-      </div>
-    </md-sidenav>
-
+  <div flex layout="column">
+    <div layout="column" flex>
+      <md-button ng-href="#!/topics">Лабораторные работы</md-button>
+      <md-button ng-href="#!/about">О себе</md-button>
+    </div>
     <md-content flex id="content">
       <div ng-view></div>
     </md-content>
-
   </div>
+  
+    <div id="clock"></div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-animate.min.js"></script>
@@ -57,6 +61,8 @@
   <script src="app/image/image.component.js"></script>
   <script src="app/list/list.component.js"></script>
 
+
+  
 </body>
 
 </html>
